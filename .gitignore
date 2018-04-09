@@ -1,0 +1,16 @@
+.idea/
+.DS_Store
+node_modules/
+/images/
+*.swp
+*.map
+*~
+.sass-cache
+.project
+*.prefs
+com.aptana.editor.common.prefs
+com.aptana.editor.php.prefs
+com.eclipsesource.jshint.ui.prefs
+org.eclipse.ltk.core.refactoring.prefs
+*.scssclear
+npm-debug.log

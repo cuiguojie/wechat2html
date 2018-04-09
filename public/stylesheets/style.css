@@ -1,0 +1,190 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,button,textarea,p,blockquote,th,td {margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+caption,em,th{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6 { font-size:100%; color: #333;}
+textarea{overflow:auto;resize:none;padding: 10px; height: 500px; font-family:arial;font-size:14px;box-sizing: border-box;border: 1px solid #E6E5E1; color: #999;}
+input[type="submit"], input[type="reset"]{
+  text-align:center; cursor:pointer; filter:chroma(color=#000000); border:0 none;
+}
+input[type="text"] {
+  padding: 0 10px; height: 35px; border: 1px solid #E6E5E1; font-family: arial; font-size: 14px; box-sizing: border-box;
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+img{vertical-align:middle;}
+
+body {
+  font-size: 14px; line-height: 1.5; color: #666; background: #F5F5F5;
+}
+
+a {
+  color: #20C1E8;
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom:1;
+}
+
+.wrapper {
+  position: fixed; left: 50%; margin-left: -500px; top: 50%; margin-top: -33px; padding: 15px 0; width: 1000px; background: #FFF;
+}
+
+.hasContent {
+  position: static; left: 0; top: 0; margin: 0 auto;
+}
+
+#opt {
+   padding: 0 15px;
+}
+
+#opt input[type="text"] {
+  float: left; width: 874px;
+}
+
+#opt input[type="submit"] {
+  width: 96px; height: 35px; color: #FFF; background: #517FE2;
+}
+
+#opt .tips {
+  display: none; margin-top: 10px;
+}
+
+#opt .tips span {
+  color: #F00;
+}
+
+.tab {
+  display: none; margin-top: 20px;
+}
+
+.tabs-nav {
+  background: #FFF;
+  border-bottom: 1px solid #E1E6EF;
+}
+
+.tabs-nav li {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tabs-nav li a {
+  color: #999;
+}
+
+.tabs-nav .selected:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  overflow: hidden;
+  background: #36a9e1;
+}
+
+.tabs-nav .selected a {
+  color: #333;
+}
+
+.tabs-content {
+  padding: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.article {
+  margin: 0 auto; width: 774px; line-height: 20px; color: #666; background: #fff; font-size: 14px;
+}
+
+.article h2, .article h3, .article p, .article ol, .article ul, .article img {
+  margin-bottom: 20px;
+}
+
+.article h2, .article h3 {
+  line-height: 1.5; font-size: 14px; font-weight: 700;
+}
+
+.article img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.article img[src^="https://mmbiz.qpic.cn/"] {
+  opacity: 0.4;
+}
+
+#code {
+  width: 100%; height: 500px;
+}
+
+.dialog {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  height: 200px;
+  margin-left: -150px;
+  margin-top: -100px;
+  z-index: 10001;
+  background: #FFF;
+}
+
+.dialog .hd {
+  position: relative; padding: 0 10px; height: 40px; line-height: 40px; border-bottom: 1px solid #EEE;
+}
+
+.dialog .close {
+  position: absolute; right: 10px; top: 0; cursor: pointer;
+}
+
+.dialog .bd {
+  padding: 10px;
+}
+
+.dialog input[type="text"] {
+  float: left; width: 384px;
+}
+
+.dialog input[type="submit"] {
+  width: 96px; height: 35px; color: #FFF; background: #517FE2;
+}
+
+.dialog .bd p:first-child {
+  margin-bottom: 10px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.5;
+  background: #000;
+  z-index: 1000;
+}

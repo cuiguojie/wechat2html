@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .wrapper
+    #opt
+      form
+        fileset.clearfix
+          input(type="text", placeholder="请输入微信公众号文章地址")
+          input(type="submit", value="转换")
+        p.tips 微信公众号后台上传的图片有防盗链机制，需要替换图片地址。需替换的图片标记为 <strong>半透明</strong>，点击可替换或删除。未替换：<span>5</span>
+
+    .tab
+      ul.tabs-nav.clearfix
+        li.selected 预览
+        li 代码
+      .tabs-content
+        .article
+      .tabs-content.hide
+        textarea#code
+
+  .dialog
+    .hd
+      h2 替换/删除图片
+      span.close 关闭
+    .bd
+      p.clearfix
+        input(type="text", placeholder="请输入新的图片地址")
+        input(type="submit", value="替换")
+      p 如果图片过大，替换后可能需要等待加载才能看到预览生效
+      br
+      p 或者 <a href="#" class="remove">删除当前图片</a>
+
+  .overlay
