@@ -11,39 +11,36 @@ var options = {
   'remove-empty-tags': []
 };
 
+var pdfoptions = {
+  format: 'A4',
+  orientation: 'portrait',
+  margin: '1cm',
+  quality: 100,
+};
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
 
-router.post('/api/', function(req, res, next) {
-  const { url } = req.body;
+router.get('/api/', function(req, res, next) {
+  const url = req.query.url;
+  console.log(req.query);
 
   axios
     .get(url)
     .then(function (response) {
       var $ = cheerio.load(response.data, { decodeEntities: false });
 
-      var content = $('.rich_media_content');
-
-      content.find('img').each(function(idx, ele){
+      $('img').each(function(idx, ele){
         var src = $(ele).data('src');
 
         $(ele).attr('src', src);
         $(ele).removeAttr('data-src');
-        $(ele).removeAttr('style');
       });
 
-      content.find('p').each(function(idx, ele){
-        $(ele).removeAttr('style');
-      });
-
-      cleaner.clean(content.html(), options, function(html) {
-        res.send({
-          html,
-        })
-      })
+      res.send($.html());
     })
     .catch(function (err) {
       console.log(err);
